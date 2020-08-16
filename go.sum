@@ -1,0 +1,4 @@
+github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646 h1:zYyBkD/k9seD2A7fsi6Oo2LfFZAehjjQMERAvZLEDnQ=
+github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646/go.mod h1:jpp1/29i3P1S/RLdc7JQKbRpFeM1dOBd8T9ki5s+AY8=
+github.com/olahol/go-imageupload v0.0.0-20160503070439-09d2b92fa05e h1:D+2SJP3M28/qa06V4hd58mtwGpxLvETzr13TulfiY3I=
+github.com/olahol/go-imageupload v0.0.0-20160503070439-09d2b92fa05e/go.mod h1:eMj0NtsjEiAkTBsC2+z+T3r09RWe1VYdb0b82JMzFlI=
