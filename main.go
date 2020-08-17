@@ -1,6 +1,8 @@
 package main
 
 import (
+	"os"
+
 	"github.com/gin-gonic/gin"
 	"github.com/olahol/go-imageupload"
 )
@@ -29,5 +31,5 @@ func main() {
 			"message": "uploadSuccess",
 		})
 	})
-	r.Run(":80")
+	r.Run(":" + os.Getenv("PORT"))
 }
