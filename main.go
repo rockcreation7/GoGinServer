@@ -37,6 +37,7 @@ func main() {
 
 	r.POST("/", formHandler)
 
+	r.Static("/assets", "./assets")
 	r.StaticFS("/upload", http.Dir("upload"))
 
 	r.POST("/upload", func(c *gin.Context) {
@@ -73,6 +74,13 @@ func main() {
 		c.JSON(http.StatusOK, gin.H{"status": "SMS sent"})
 	})
 
+	r.POST("/json", func(c *gin.Context) {
+		var json []string
+		json = c.PostFormArray("data")
+		fmt.Println(json[1])
+		c.String(200, "message")
+	})
+
 	Port := os.Getenv("PORT")
 	if Port == "" {
 		Port = "8000"
@@ -88,6 +96,7 @@ type myForm struct {
 func formHandler(c *gin.Context) {
 	var fakeForm myForm
 	c.Bind(&fakeForm)
+	fmt.Println(fakeForm.Colors[1])
 	c.JSON(200, gin.H{"color": fakeForm.Colors})
 }
 
